@@ -3,11 +3,11 @@
     "log_level": "info"
   },
   "panel": {
-    "type": "sspanel",
-    "url": "https://SSPanel.address",
-    "key": "SSPanel-Key",
-    "node_ids": [1, 2],
-    "nodes_type": ["vmess", "ss"]
+    "type": "v2board",
+    "url": "https://v1.hiccupc.xyz",
+    "key": "djasiojdoiasnfioasndoisa",
+    "node_ids": [1],
+    "nodes_type": ["vmess"]
   },
   "proxy": {
     "type": "xray",
