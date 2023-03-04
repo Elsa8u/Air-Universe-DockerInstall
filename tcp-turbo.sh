@@ -21,7 +21,7 @@ net.ipv4.tcp_retries2=5
 net.ipv4.tcp_synack_retries=2
 net.ipv4.tcp_window_scaling=1
 net.ipv4.tcp_adv_win_scale=1
-net.ipv4.tcp_mem=464346        719129        1528692
+net.ipv4.tcp_mem=764346        1019129        1528692
 net.ipv4.tcp_rmem=4096        87380        33554432
 net.ipv4.tcp_wmem=4096        65536        33554432
 
@@ -41,7 +41,6 @@ net.ipv4.tcp_moderate_rcvbuf = 1
 net.ipv4.tcp_low_latency = 0
 net.ipv4.tcp_slow_start_after_idle = 1
 net.ipv4.tcp_reordering = 3
-net.ipv4.tcp_ecn = 2
 net.ipv4.tcp_orphan_retries = 0
 net.ipv4.tcp_synack_retries = 2
 net.ipv4.tcp_fack = 1
