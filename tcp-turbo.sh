@@ -30,7 +30,6 @@ vm.min_free_kbytes = 524288
 vm.vfs_cache_pressure = 100
 net.core.somaxconn = 8192
 net.core.netdev_max_backlog = 8192
-net.ipv4.ip_local_port_range = 1000 65000
 net.netfilter.nf_conntrack_max = 131072
 net.nf_conntrack_max = 131072
 net.ipv6.conf.all.disable_ipv6 = 1
