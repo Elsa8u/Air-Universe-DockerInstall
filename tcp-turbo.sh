@@ -30,9 +30,12 @@ net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
 
 echo "* soft nofile 1048576
+ DefaultLimitNPROC=1000000
+ root hard nofile 1048576
 * hard nofile 1048576
 * soft nproc 1048576
 * hard nproc 1048576
+DefaultLimitNOFILE=1000000
 * soft core 1048576
 * hard core 1048576
 * hard memlock unlimited
