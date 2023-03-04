@@ -1,5 +1,6 @@
 #!/bin/sh
 echo "fs.file-max = 1000000
+kernel.core_pattern=/home/cores/core.%P.%e.%t
 net.ipv4.tcp_tw_reuse = 1
 fs.inotify.max_user_watches = 1000000
 net.ipv4.tcp_max_tw_buckets = 1000000
@@ -21,9 +22,10 @@ net.ipv4.tcp_retries2=5
 net.ipv4.tcp_synack_retries=2
 net.ipv4.tcp_window_scaling=1
 net.ipv4.tcp_adv_win_scale=1
+net.ipv4.tcp_fastopen = 3
 net.ipv4.tcp_mem=764346        1019129        1528692
-net.ipv4.tcp_rmem=4096        87380        33554432
-net.ipv4.tcp_wmem=4096        65536        3355443
+net.ipv4.tcp_rmem=4096        87380        67108864
+net.ipv4.tcp_wmem=4096        65536        67108864
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
 
