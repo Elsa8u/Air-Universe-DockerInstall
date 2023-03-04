@@ -1,13 +1,13 @@
 #!/bin/sh
-echo "fs.file-max = 1000000
+echo "
+
 net.ipv4.tcp_tw_reuse = 1
-fs.inotify.max_user_watches = 1000000
-net.ipv4.tcp_max_tw_buckets = 1000000
+fs.inotify.max_user_watches = 100000
+net.ipv4.tcp_max_tw_buckets = 100000
 net.ipv4.tcp_max_syn_backlog=262144
 net.core.somaxconn=163840
-net.ipv4.tcp_syn_retries=3
+net.ipv4.tcp_syn_retries=2
 net.core.netdev_max_backlog=163840
-net.ipv4.tcp_timestamps=1
 net.ipv4.tcp_keepalive_time = 1200
 fs.file-max=11000000
 fs.nr_open=10000000
@@ -24,6 +24,22 @@ net.ipv4.tcp_adv_win_scale=1
 net.ipv4.tcp_mem=764346        1019129        1528692
 net.ipv4.tcp_rmem=4096        87380        33554432
 net.ipv4.tcp_wmem=4096        65536        33554432
+
+net.ipv4.tcp_slow_start_after_idle = 0
+fs.file-max = 1000000
+fs.inotify.max_user_instances = 8192
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_fin_timeout = 30
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.ip_local_port_range = 1024 65000
+net.ipv4.tcp_max_syn_backlog = 16384
+
+net.ipv4.route.gc_timeout = 100
+net.core.netdev_max_backlog = 32768
+net.ipv4.tcp_timestamps = 0
+net.ipv4.tcp_max_orphans = 32768
+
+
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
 
