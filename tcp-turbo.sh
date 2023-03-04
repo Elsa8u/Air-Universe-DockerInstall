@@ -37,7 +37,7 @@ echo "* soft nofile 1048576
 * soft memlock unlimited
 ">/etc/security/limits.conf
 
-sysctl -p 2>&1 > /dev/null
-sysctl --system 2>&1 > /dev/null
+sysctl -p 
+sysctl --system 
 
 echo "优化完成, 请重启系统生效 (OpenVZ/LXC 架构可能效果不佳 建议升级到5.10以上的内核并开启BBR)"
