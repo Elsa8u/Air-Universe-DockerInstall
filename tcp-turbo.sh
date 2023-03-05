@@ -31,11 +31,10 @@ net.ipv4.tcp_syncookies = 1
 net.ipv4.tcp_tw_reuse = 1
 net.ipv4.ip_local_port_range = 1024 65000
 net.ipv4.tcp_max_syn_backlog = 16384
-net.core.netdev_budget = 900
+net.core.netdev_budget = 750
 net.ipv4.ip_early_demux=0
 net.core.dev_weight=1024
-net.ipv4.tcp_keepalive_time = 300
-net.ipv4.tcp_keepalive_probes = 5
+net.ipv4.tcp_keepalive_time = 600
 net.ipv4.tcp_keepalive_intvl = 15
 
 net.ipv4.ip_conntrack_max = 655360
