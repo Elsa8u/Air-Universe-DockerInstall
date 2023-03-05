@@ -21,8 +21,8 @@ net.ipv4.tcp_synack_retries=2
 net.ipv4.tcp_window_scaling=1
 net.ipv4.tcp_adv_win_scale=1
 net.ipv4.tcp_mem=764346        1019129        1528692
-net.ipv4.tcp_rmem=4096        131072        33554432
-net.ipv4.tcp_wmem=4096        131072        33554432
+net.ipv4.tcp_rmem=4096        87380        67108864
+net.ipv4.tcp_wmem=4096        87380        67108864
 
 net.ipv4.tcp_slow_start_after_idle = 0
 fs.file-max = 1000000
