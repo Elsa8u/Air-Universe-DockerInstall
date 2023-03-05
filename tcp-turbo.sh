@@ -1,12 +1,11 @@
 #!/bin/sh
 echo "
-
 fs.inotify.max_user_watches = 100000
 net.ipv4.tcp_max_tw_buckets = 100000
 net.ipv4.tcp_max_syn_backlog=262144
 net.core.somaxconn=163840
+net.ipv4.tcp_syn_retries=2
 net.core.netdev_max_backlog=163840
-
 fs.file-max=11000000
 fs.nr_open=10000000
 net.ipv4.icmp_echo_ignore_all=0
@@ -16,43 +15,33 @@ net.ipv4.tcp_fin_timeout=10
 net.ipv4.tcp_sack=1
 net.ipv4.tcp_retries1=3
 net.ipv4.tcp_retries2=5
+net.ipv4.tcp_synack_retries=2
 net.ipv4.tcp_window_scaling=1
-
-net.ipv4.tcp_window_scaling=1
-net.ipv4.tcp_rmem=4096 102400 16777216
-net.ipv4.tcp_wmem=4096 102400 16777216
-net.ipv4.tcp_mem=786432 1048576 1572864
-net.ipv4.tcp_syn_retries=3
-net.ipv4.tcp_synack_retries=3
-net.ipv4.tcp_max_syn_backlog=262144
-net.ipv4.tcp_max_orphans=262144
-
-
-
+net.ipv4.tcp_adv_win_scale=1
+net.ipv4.tcp_mem=764346        1019129        1528692
+net.ipv4.tcp_rmem=4096        131072        67108864
+net.ipv4.tcp_wmem=4096        87380        67108864
 net.ipv4.tcp_slow_start_after_idle = 0
 fs.file-max = 1000000
 fs.inotify.max_user_instances = 8192
 net.ipv4.tcp_syncookies = 1
 net.ipv4.tcp_tw_reuse = 1
 net.ipv4.ip_local_port_range = 1024 65000
+net.ipv4.tcp_max_syn_backlog = 16384
 net.core.netdev_budget = 600
 net.ipv4.ip_early_demux=0
 net.core.dev_weight=1024
 net.ipv4.tcp_keepalive_time = 900
-
-net.ipv4.neigh.default.gc_thresh1=10240
-net.ipv4.neigh.default.gc_thresh2=40960
-net.ipv4.neigh.default.gc_thresh3=81920
 net.ipv4.ip_conntrack_max = 655360
 net.ipv4.tcp_no_metrics_save = 0
 net.ipv4.tcp_low_latency = 0
-net.ipv4.tcp_reordering = 3
+net.ipv4.tcp_reordering = 2
 net.ipv4.tcp_orphan_retries = 0
+net.ipv4.tcp_synack_retries = 2
 net.ipv4.tcp_fack = 1
 net.ipv4.route.gc_timeout = 100
 net.core.netdev_max_backlog = 32768
-
-
+net.ipv4.tcp_max_orphans = 32768
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
 
