@@ -7,7 +7,7 @@ net.ipv4.tcp_max_syn_backlog=262144
 net.core.somaxconn=163840
 net.ipv4.tcp_syn_retries=2
 net.core.netdev_max_backlog=163840
-net.ipv4.tcp_keepalive_time = 1200
+
 fs.file-max=11000000
 fs.nr_open=10000000
 net.ipv4.icmp_echo_ignore_all=0
@@ -34,6 +34,9 @@ net.ipv4.tcp_max_syn_backlog = 16384
 net.core.netdev_budget = 900
 net.ipv4.ip_early_demux=0
 net.core.dev_weight=1024
+net.ipv4.tcp_keepalive_time = 300
+net.ipv4.tcp_keepalive_probes = 5
+net.ipv4.tcp_keepalive_intvl = 15
 
 net.ipv4.ip_conntrack_max = 655360
 net.ipv4.tcp_no_metrics_save = 0
