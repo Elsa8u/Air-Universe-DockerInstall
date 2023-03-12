@@ -18,9 +18,17 @@ net.ipv4.tcp_retries2=5
 net.ipv4.tcp_synack_retries=2
 net.ipv4.tcp_window_scaling=1
 net.ipv4.tcp_adv_win_scale=1
-net.ipv4.tcp_mem=764346        1019129        1528692
+net.ipv4.tcp_mem=131072  262144  524288
 net.ipv4.tcp_rmem=4096        131072        67108864
 net.ipv4.tcp_wmem=4096        87380        67108864
+
+net.ipv4.neigh.default.gc_thresh3=8192
+net.ipv4.neigh.default.gc_thresh2=4096
+net.ipv4.neigh.default.gc_thresh1=2048
+net.ipv6.neigh.default.gc_thresh3=8192
+net.ipv6.neigh.default.gc_thresh2=4096
+net.ipv6.neigh.default.gc_thresh1=2048
+
 net.ipv4.tcp_slow_start_after_idle = 0
 fs.file-max = 1000000
 fs.inotify.max_user_instances = 8192
@@ -28,7 +36,7 @@ net.ipv4.tcp_syncookies = 1
 net.ipv4.tcp_tw_reuse = 1
 net.ipv4.ip_local_port_range = 1024 65000
 net.ipv4.tcp_max_syn_backlog = 16384
-net.core.netdev_budget = 900
+net.core.netdev_budget = 600
 net.ipv4.ip_early_demux=0
 net.core.dev_weight=1024
 net.ipv4.tcp_keepalive_time = 1200
