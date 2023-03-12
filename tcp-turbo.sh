@@ -1,10 +1,10 @@
 #!/bin/sh
 echo "
 fs.inotify.max_user_watches = 100000
-net.ipv4.tcp_max_tw_buckets = 100000
+net.ipv4.tcp_max_tw_buckets = 12000
 net.ipv4.tcp_max_syn_backlog=262144
 net.core.somaxconn=163840
-net.ipv4.tcp_syn_retries=2
+net.ipv4.tcp_syn_retries=1
 net.core.netdev_max_backlog=163840
 fs.file-max=11000000
 fs.nr_open=10000000
@@ -45,7 +45,7 @@ net.ipv4.tcp_no_metrics_save = 0
 net.ipv4.tcp_low_latency = 0
 net.ipv4.tcp_reordering = 2
 net.ipv4.tcp_orphan_retries = 0
-net.ipv4.tcp_synack_retries = 2
+net.ipv4.tcp_synack_retries = 1
 net.ipv4.tcp_fack = 1
 net.ipv4.route.gc_timeout = 100
 net.core.netdev_max_backlog = 32768
