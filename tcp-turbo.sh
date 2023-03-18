@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "
 fs.inotify.max_user_watches = 100000
-net.ipv4.tcp_max_tw_buckets = 12000
+net.ipv4.tcp_max_tw_buckets = 6000
 net.ipv4.tcp_max_syn_backlog=262144
 net.core.somaxconn=163840
 net.ipv4.tcp_syn_retries=1
@@ -11,7 +11,7 @@ fs.nr_open=10000000
 net.ipv4.icmp_echo_ignore_all=0
 net.ipv4.ip_forward=1
 net.ipv4.tcp_moderate_rcvbuf=1
-net.ipv4.tcp_fin_timeout=20
+net.ipv4.tcp_fin_timeout=15
 net.ipv4.tcp_sack=1
 net.ipv4.tcp_retries1=3
 net.ipv4.tcp_retries2=5
@@ -25,9 +25,6 @@ net.ipv4.tcp_wmem=4096        131072        67108864
 net.ipv4.neigh.default.gc_thresh3=8192
 net.ipv4.neigh.default.gc_thresh2=4096
 net.ipv4.neigh.default.gc_thresh1=2048
-net.ipv6.neigh.default.gc_thresh3=8192
-net.ipv6.neigh.default.gc_thresh2=4096
-net.ipv6.neigh.default.gc_thresh1=2048
 
 net.ipv4.tcp_slow_start_after_idle = 0
 fs.file-max = 1000000
@@ -44,12 +41,14 @@ net.ipv4.ip_conntrack_max = 655360
 net.ipv4.tcp_no_metrics_save = 0
 net.ipv4.tcp_low_latency = 0
 net.ipv4.tcp_reordering = 2
-net.ipv4.tcp_orphan_retries = 0
+net.ipv4.tcp_orphan_retries = 1
 net.ipv4.tcp_synack_retries = 1
 net.ipv4.tcp_fack = 1
 net.ipv4.route.gc_timeout = 100
 net.core.netdev_max_backlog = 32768
 net.ipv4.tcp_max_orphans = 32768
+net.ipv4.tcp_fastopen = 3
+net.ipv4.tcp_rfc1337 = 0
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
 
