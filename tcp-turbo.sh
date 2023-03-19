@@ -30,7 +30,7 @@ net.ipv4.neigh.default.gc_thresh2=4096
 net.ipv4.neigh.default.gc_thresh1=2048
 
 net.ipv4.ip_local_port_range = 1024 65000
-net.core.netdev_budget = 900
+net.core.netdev_budget = 600
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
 
