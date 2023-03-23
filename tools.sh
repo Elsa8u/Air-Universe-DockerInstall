@@ -10,7 +10,7 @@ copyright(){
 echo "\
 ############################################################
 
-Linux网络优化脚本
+Linux网络优化脚本  修改版
 Powered by NNC.SH
 
 ############################################################
@@ -29,6 +29,7 @@ sed -i '/net.ipv4.tcp_adv_win_scale/d' /etc/sysctl.conf
 sed -i '/net.ipv4.tcp_moderate_rcvbuf/d' /etc/sysctl.conf
 sed -i '/net.ipv4.tcp_rmem/d' /etc/sysctl.conf
 sed -i '/net.ipv4.tcp_wmem/d' /etc/sysctl.conf
+sed -i '/net.core.netdev_budget/d' /etc/sysctl.conf
 sed -i '/net.core.rmem_max/d' /etc/sysctl.conf
 sed -i '/net.core.wmem_max/d' /etc/sysctl.conf
 sed -i '/net.ipv4.udp_rmem_min/d' /etc/sysctl.conf
@@ -43,13 +44,14 @@ net.ipv4.tcp_mtu_probing=0
 net.ipv4.tcp_rfc1337=0
 net.ipv4.tcp_sack=1
 net.ipv4.tcp_fack=1
+net.core.netdev_budget = 600
 net.ipv4.tcp_window_scaling=1
 net.ipv4.tcp_adv_win_scale=1
 net.ipv4.tcp_moderate_rcvbuf=1
 net.core.rmem_max=33554432
 net.core.wmem_max=33554432
 net.ipv4.tcp_rmem=4096 87380 33554432
-net.ipv4.tcp_wmem=4096 16384 33554432
+net.ipv4.tcp_wmem=4096 32768 33554432
 net.ipv4.udp_rmem_min=8192
 net.ipv4.udp_wmem_min=8192
 net.core.default_qdisc=fq
