@@ -24,8 +24,8 @@ net.ipv4.tcp_synack_retries=2
 net.ipv4.tcp_window_scaling=1
 net.ipv4.tcp_adv_win_scale=1
 net.ipv4.tcp_mem=764346        1019129        1528692
-net.ipv4.tcp_rmem=4096        87380        134217728
-net.ipv4.tcp_wmem=4096        65536        134217728
+net.ipv4.tcp_rmem=4096        87380        67108864
+net.ipv4.tcp_wmem=4096        65536        67108864
 net.core.netdev_budget = 600
 
 net.core.default_qdisc=fq
