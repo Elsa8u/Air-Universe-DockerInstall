@@ -33,6 +33,8 @@ net.core.netdev_budget = 600
 net.ipv4.neigh.default.gc_thresh1 = 4096
 net.ipv4.neigh.default.gc_thresh2 = 8192
 net.ipv4.neigh.default.gc_thresh3 = 16384
+net.ipv4.neigh.default.gc_interval = 5
+net.ipv4.neigh.default.gc_stale_time = 120
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
 
