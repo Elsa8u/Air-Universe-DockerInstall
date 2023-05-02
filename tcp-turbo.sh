@@ -51,10 +51,11 @@ net.ipv4.tcp_window_scaling=1
 net.ipv4.tcp_adv_win_scale=1
 net.ipv4.tcp_moderate_rcvbuf=1
 net.ipv4.tcp_mem = 786432 2097152 3145728 
-net.ipv4.tcp_rmem = 4096 524288 67108864
-net.ipv4.tcp_wmem = 4096 524288 67108864
+net.ipv4.tcp_rmem = 4096 262144 67108864
+net.ipv4.tcp_wmem = 4096 262144 67108864
 net.ipv4.udp_rmem_min=8192
 net.ipv4.udp_wmem_min=8192
+net.core.netdev_budget = 600
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr
 
@@ -62,7 +63,7 @@ net.ipv4.tcp_congestion_control=bbr
 net.netfilter.nf_conntrack_tcp_timeout_fin_wait = 30
 net.netfilter.nf_conntrack_tcp_timeout_time_wait = 30
 net.netfilter.nf_conntrack_tcp_timeout_close_wait = 15
-net.netfilter.nf_conntrack_tcp_timeout_established = 350
+net.netfilter.nf_conntrack_tcp_timeout_established = 150
 net.netfilter.nf_conntrack_max = 25000000
 net.netfilter.nf_conntrack_buckets = 25000000
 
