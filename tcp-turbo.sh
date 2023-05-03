@@ -53,6 +53,7 @@ net.ipv4.tcp_moderate_rcvbuf=1
 net.ipv4.tcp_mem = 786432 2097152 3145728 
 net.ipv4.tcp_rmem = 4096 262144 67108864
 net.ipv4.tcp_wmem = 4096 262144 67108864
+net.ipv4.tcp_fastopen = 3
 net.ipv4.udp_rmem_min=8192
 net.ipv4.udp_wmem_min=8192
 net.core.netdev_budget = 600
