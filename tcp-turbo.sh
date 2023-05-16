@@ -41,10 +41,10 @@ net.ipv4.tcp_fack = 1
 net.ipv4.tcp_window_scaling = 1
 net.ipv4.tcp_adv_win_scale = 1
 net.ipv4.tcp_moderate_rcvbuf = 1
-net.core.rmem_max = 33554432
-net.core.wmem_max = 33554432
+net.core.rmem_max = 67108864
+net.core.wmem_max = 67108864
 net.ipv4.tcp_rmem = 4096 87380 67108864
-net.ipv4.tcp_wmem = 4096 65536 6710886
+net.ipv4.tcp_wmem = 4096 65536 67108864
 net.ipv4.udp_rmem_min = 8192
 net.ipv4.udp_wmem_min = 8192
 net.ipv4.tcp_mem = 262144 1048576 4194304
@@ -52,7 +52,8 @@ net.ipv4.udp_mem = 262144 1048576 4194304
 net.ipv4.tcp_congestion_control = bbr
 net.core.default_qdisc = fq
 net.ipv4.ping_group_range = 0 2147483647
-net.core.netdev_budget = 600">/etc/sysctl.conf
+net.core.netdev_budget = 600
+net.ipv4.tcp_low_latency = 1">/etc/sysctl.conf
 
 cat >'/etc/sysctl.d/99-sysctl.conf' <<EOF
 fs.file-max = 1000000
@@ -99,7 +100,7 @@ net.ipv4.tcp_moderate_rcvbuf = 1
 net.core.rmem_max = 33554432
 net.core.wmem_max = 33554432
 net.ipv4.tcp_rmem = 4096 87380 67108864
-net.ipv4.tcp_wmem = 4096 65536 6710886
+net.ipv4.tcp_wmem = 4096 65536 67108864
 net.ipv4.udp_rmem_min = 8192
 net.ipv4.udp_wmem_min = 8192
 net.ipv4.tcp_mem = 262144 1048576 4194304
@@ -110,8 +111,7 @@ net.ipv4.ping_group_range = 0 2147483647
 net.core.netdev_budget = 600
 net.ipv4.tcp_low_latency = 1
 EOF
-  sysctl -p
-  sysctl --system
+
   echo always >/sys/kernel/mm/transparent_hugepage/enabled
 
 
