@@ -28,7 +28,6 @@ net.ipv4.tcp_reordering = 300
 net.ipv4.tcp_retrans_collapse = 0
 net.ipv4.tcp_autocorking = 1
 net.ipv4.tcp_low_latency = 0
-net.ipv4.tcp_slow_start_after_idle = 1
 net.ipv4.tcp_syn_retries = 1
 net.ipv4.tcp_synack_retries = 1
 net.ipv4.tcp_timestamps = 0
