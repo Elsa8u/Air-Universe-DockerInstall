@@ -16,6 +16,7 @@ net.ipv4.ip_forward=1
 net.ipv4.tcp_moderate_rcvbuf=1
 net.ipv4.tcp_fin_timeout=15
 net.ipv4.tcp_sack=1
+net.ipv4.tcp_slow_start_after_idle = 0
 net.ipv4.tcp_retries1=3
 net.ipv4.tcp_retries2=5
 net.ipv4.tcp_synack_retries=2
