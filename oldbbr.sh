@@ -25,6 +25,8 @@ net.ipv4.tcp_adv_win_scale=1
 net.ipv4.tcp_rmem = 4096 131072 67108864
 net.ipv4.tcp_wmem = 4096 87380 67108864
 net.core.netdev_budget = 600
+net.ipv4.tcp_notsent_lowat = 131072
+net.ipv4.tcp_collapse_max_bytes = 6291456
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
 
