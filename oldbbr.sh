@@ -46,6 +46,5 @@ DefaultLimitNOFILE=1000000
 ">/etc/security/limits.conf
 
 sysctl -p 
-sysctl --system 
 
 echo "优化完成, 请重启系统生效 (OpenVZ/LXC 架构可能效果不佳 建议升级到5.10以上的内核并开启BBR)"
