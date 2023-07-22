@@ -84,11 +84,9 @@ net.ipv4.tcp_rmem = 4096 87380 67108864
 net.ipv4.tcp_wmem = 4096 65536 67108864
 net.ipv4.udp_rmem_min = 8192
 net.ipv4.udp_wmem_min = 8192
-net.ipv4.tcp_mem = 262144 1048576 4194304
-net.ipv4.udp_mem = 262144 1048576 4194304
 net.ipv4.tcp_congestion_control = bbr
 net.core.default_qdisc = fq
-net.core.netdev_budget = 500
+net.core.netdev_budget = 450
 net.ipv4.ping_group_range = 0 2147483647
 
 EOF
