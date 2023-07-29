@@ -45,13 +45,13 @@ net.ipv4.tcp_slow_start_after_idle=0
 net.core.rmem_max=50331648
 net.ipv4.tcp_max_syn_backlog=65536
 net.core.somaxconn=65536
-net.ipv4.tcp_mem="524288 786432 1086432"
+net.ipv4.tcp_mem=524288 786432 1086432
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr
 net.core.rmem_max=67108864
 net.core.wmem_max=67108864
-net.ipv4.tcp_rmem='4096 87380 67108864'
-net.ipv4.tcp_wmem='4096 16384 67108864'
+net.ipv4.tcp_rmem=4096 87380 67108864
+net.ipv4.tcp_wmem=4096 16384 67108864
 
 EOF
 sysctl -p && sysctl --system
