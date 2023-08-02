@@ -23,9 +23,11 @@ net.ipv4.tcp_retries2=8
 net.ipv4.tcp_synack_retries=1
 net.ipv4.tcp_window_scaling=1
 net.ipv4.tcp_adv_win_scale=1
-net.ipv4.tcp_mem=764346        1019129        1528692
-net.ipv4.tcp_rmem=4096        87380        33554432
-net.ipv4.tcp_wmem=4096        65536        33554432
+net.core.rmem_max = 67108864
+net.core.wmem_max = 67108864
+net.ipv4.tcp_mem=262144 393216 524288
+net.ipv4.tcp_rmem=4096        87380        67108864
+net.ipv4.tcp_wmem=4096        65536        67108864
 net.core.default_qdisc=fq
 
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
