@@ -37,21 +37,25 @@ sed -i '/net.ipv4.udp_wmem_min/d' /etc/sysctl.conf
 sed -i '/net.core.default_qdisc/d' /etc/sysctl.conf
 sed -i '/net.ipv4.tcp_congestion_control/d' /etc/sysctl.conf
 cat >> /etc/sysctl.conf << EOF
-net.ipv4.tcp_tw_reuse=1
-net.ipv4.tcp_fin_timeout=60
-net.ipv4.tcp_max_tw_buckets=2000000
-vm.max_map_count=262144
-net.ipv4.tcp_slow_start_after_idle=0
-net.core.rmem_max=50331648
-net.ipv4.tcp_max_syn_backlog=65536
-net.core.somaxconn=65536
-net.ipv4.tcp_mem=524288 786432 1086432
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr
 net.core.rmem_max=67108864
 net.core.wmem_max=67108864
-net.ipv4.tcp_rmem=4096 87380 67108864
-net.ipv4.tcp_wmem=4096 16384 67108864
+net.ipv4.tcp_rmem=4096 131072 16777216
+net.ipv4.tcp_wmem=4096 65535 16777216
+net.ipv4.tcp_notsent_lowat=16384
+net.ipv4.tcp_tw_reuse=1
+net.ipv4.tcp_fin_timeout=90
+net.ipv4.tcp_max_tw_buckets=2000000
+vm.max_map_count=2621440
+net.ipv4.tcp_slow_start_after_idle=0
+net.ipv4.tcp_max_syn_backlog=65536
+net.core.somaxconn=65536
+net.ipv4.tcp_mem=393216 524288 786432
+net.ipv4.tcp_ecn=1
+net.ipv4.tcp_ecn_fallback=1
+net.ipv4.ip_local_port_range=10000 65535
+
 
 EOF
 sysctl -p && sysctl --system
