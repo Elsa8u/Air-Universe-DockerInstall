@@ -19,7 +19,7 @@ net.ipv4.tcp_moderate_rcvbuf=1
 net.ipv4.tcp_fin_timeout=15
 net.ipv4.tcp_sack=1
 net.ipv4.tcp_retries1=3
-net.ipv4.tcp_retries2=8
+net.ipv4.tcp_retries2=5
 net.ipv4.tcp_synack_retries=1
 net.ipv4.tcp_window_scaling=1
 net.ipv4.tcp_adv_win_scale=1
@@ -27,9 +27,9 @@ net.core.rmem_max = 67108864
 net.core.wmem_max = 67108864
 net.ipv4.tcp_mem=262144 393216 524288
 net.ipv4.tcp_rmem=4096        131072        67108864
-net.ipv4.tcp_wmem=4096        87380        67108864
+net.ipv4.tcp_wmem=4096        16384        67108864
 net.core.default_qdisc=fq
-
+net.core.netdev_budget = 600
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
 
 echo "* soft nofile 1048576
