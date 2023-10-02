@@ -27,6 +27,8 @@ proxies:
 
 proxy-groups:
     - { name: '🚀 节点选择', type: select, proxies: ['临时节点'] }
+    - { name: '🎯 全球直连', type: select, proxies: [DIRECT] }
+
 rules:
     - 'DOMAIN,sub.download-hiccup.xyz,DIRECT'
     - 'DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连'
