@@ -151,12 +151,9 @@ systemctl daemon-reload
 
 bbr(){
 
-if uname -r|grep -q "^5."
-then
-    echo "已经是 5.x 内核，不需要更新"
-else
+
     wget -N "http://sh.nekoneko.cloud/bbr/bbr.sh" -O bbr.sh && bash bbr.sh
-fi
+
   
 }
 
