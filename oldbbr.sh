@@ -23,6 +23,7 @@ net.ipv4.tcp_rmem=4096        131072        67108864
 net.ipv4.tcp_wmem=4096        16384        67108864
 net.core.default_qdisc=cake
 net.core.netdev_budget = 600
+net.ipv4.tcp_fastopen = 3
 net.ipv4.tcp_congestion_control=bbr">/etc/sysctl.conf
 
 echo "* soft nofile 1048576
