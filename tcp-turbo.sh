@@ -57,7 +57,7 @@ net.ipv4.udp_mem=262144 1048576 4194304
 net.ipv4.tcp_congestion_control=bbr
 net.core.default_qdisc=fq
 net.ipv4.ping_group_range=0 2147483647
-
+net.ipv4.tcp_fastopen=3
 
 net.core.netdev_budget = 600
 ">/etc/sysctl.conf
